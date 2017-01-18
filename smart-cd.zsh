@@ -7,7 +7,7 @@ _smart_cd_lastgitdir=''
 _smart_cd_chpwd_handler () {
   emulate -L zsh
 
-  [[ $SMART_CD_LS == true ]] && eval ${SMART_CD_LS_COMMAND:-k}
+  [[ $SMART_CD_LS == true ]] && eval "${SMART_CD_LS_COMMAND:-k}"
 
   if [[ $SMART_CD_GIT_STATUS == true ]]; then
     local gitdir="$(git rev-parse --git-dir 2>/dev/null)"
