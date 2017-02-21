@@ -1,0 +1,3 @@
+- document extra functions
+  - [ ] SMART_CD_LS_COMMAND
+  - [ ] SMART_CD_ONLY_IF_FITS
