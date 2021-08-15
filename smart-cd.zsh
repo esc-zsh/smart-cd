@@ -31,3 +31,4 @@ _smart_cd_chpwd_handler () {
 
 autoload -U add-zsh-hook
 add-zsh-hook chpwd _smart_cd_chpwd_handler
+[ "$PWD" != "${HOME}" ] && _smart_cd_chpwd_handler
