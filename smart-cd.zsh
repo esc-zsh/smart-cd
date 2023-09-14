@@ -11,9 +11,9 @@ _smart_cd_chpwd_handler () {
 
   if [[ $SMART_CD_LS == true ]]
   then
-    if [[ ($SMART_CD_ONLY_IF_FITS_RATIO == false) || ($(exa -1 | wc -l) -lt $(($(stty size | awk '{print $1}') * SMART_CD_ONLY_IF_FITS_RATIO/100))) ]]
+    if [[ ($SMART_CD_ONLY_IF_FITS_RATIO == false) || ($(eza -1 | wc -l) -lt $(($(stty size | awk '{print $1}') * SMART_CD_ONLY_IF_FITS_RATIO/100))) ]]
     then
-      eval "${SMART_CD_LS_COMMAND:-exa -lg --git --time-style=long-iso}"
+      eval "${SMART_CD_LS_COMMAND:-eza -lg --git --time-style=long-iso}"
     fi
   fi
 
